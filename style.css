@@ -1,17 +1,5 @@
 /* Stylize GitHub and LinkedIn icons for contrast */
-.contact img[alt="GitHub"] {
-  background: #faf9f9;
-  border-radius: 12px;
-  padding: 8px;
-  box-shadow: 0 4px 16px rgba(243, 238, 238, 0.25);
-}
 
-.contact img[alt="LinkedIn"] {
-  background: #1976d2;
-  border-radius: 12px;
-  padding: 8px;
-  box-shadow: 0 4px 16px rgba(25,118,210,0.25);
-}
 /* Keyframes for shake animation */
 @keyframes shake {
   0% { transform: translateX(0); }
@@ -71,7 +59,7 @@ section {
 
 /* Contact section: soft yellow background and shadow */
 .contact {
-  background: #fffde7;
+  background: linear-gradient(135deg, #fffde7 60%, #ffe082 100%); /* Soft yellow gradient background */
   box-shadow: 0 8px 32px rgba(255, 235, 59, 0.10);
 }
 /* Hero section: centers content and adds a light blue background */
@@ -128,7 +116,7 @@ section {
 
 /* Styles each skill item for better appearance */
 .skills li {
-  background: #fff; /* Sets a white background for each skill item */
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* Sets a white background for each skill item */
   border-radius: 12px; /* More rounded corners for floating effect */
   padding: 8px 12px; /* Adds space inside each skill item */
   box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10); /* Stronger shadow for floating effect */
@@ -149,6 +137,12 @@ h2 {
   color: #1976d2; /* Sets heading color to blue */
 }
 
-
-
+.footer{
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  color: whitesmoke;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 0.875rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
