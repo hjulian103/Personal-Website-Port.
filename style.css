@@ -1,0 +1,155 @@
+/* Stylize GitHub and LinkedIn icons for contrast */
+.contact img[alt="GitHub"] {
+  background: #faf9f9;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 4px 16px rgba(243, 238, 238, 0.25);
+}
+
+.contact img[alt="LinkedIn"] {
+  background: #1976d2;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 4px 16px rgba(25,118,210,0.25);
+}
+/* Keyframes for shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply shake animation on hover to icons */
+.icon:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+/* Sets the default font, removes default margin/padding, and sets background and text color for the whole page */
+body {
+  font-family: Arial, sans-serif; /* Sets the font for all text to Arial */
+  margin: 0; /* Removes default margin around the page */
+  padding: 0; /* Removes default padding around the page */ /* Sets a light gray background color for the page */
+  color: #222; /* Sets the text color to dark gray */
+}
+
+/* Styles for each main section (hero, bio, skills, projects, contact) */
+section {
+  max-width: 700px; /* Limits the section width for readability */
+  margin: 40px auto; /* Centers the section and adds space above/below */
+  padding: 24px; /* Adds space inside the section */
+  border-radius: 18px; /* More rounded corners for floating effect */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12); /* Soft shadow for floating effect */
+}
+
+/* Hero section: unique gradient background and shadow */
+.hero {
+  background: linear-gradient(135deg, #9e76b4 60%, #e3f2fd 100%);
+  box-shadow: 0 8px 32px rgba(158, 118, 180, 0.18);
+  color: #fff;
+}
+
+/* Bio section: soft purple background and shadow */
+.bio {
+  background: #f9e7fe;
+  box-shadow: 0 8px 32px rgba(158, 118, 180, 0.10);
+}
+
+/* Skills section: light blue background and shadow */
+.skills {
+  background: #e3f2fd;
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.10);
+}
+
+/* Projects section: soft green background and shadow */
+.projects {
+  background: #e6f7e6;
+  box-shadow: 0 8px 32px rgba(76, 175, 80, 0.10);
+}
+
+/* Contact section: soft yellow background and shadow */
+.contact {
+  background: #fffde7;
+  box-shadow: 0 8px 32px rgba(255, 235, 59, 0.10);
+}
+}
+/* Hero section: centers content and adds a light blue background */
+.hero {
+  text-align: center; /* Centers text and image in the hero section */
+}
+
+/* Adds space below the main heading in the hero section */
+.hero h1 {
+  margin-bottom: 8px; /* Adds space below the hero heading */
+}
+
+/* Styles the hero image (profile picture) */
+.hero img {
+  width: 180px; /* Sets the image width to 180px */
+  max-width: 100%; /* Makes the image responsive to container size */
+  border-radius: 100px; /* Makes the image perfectly round */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12); /* Adds a soft shadow around the image */
+  margin: 24px auto 16px auto; /* Adds space above and below, centers horizontally */
+  display: block; /* Centers the image in the section */
+  object-fit: cover; /* Crops the image to fit its container */
+}
+
+
+.hero img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+}
+
+/* Adds space above bio, skills, and projects sections */
+/* Adds space above bio, skills, and projects sections */
+.bio, .skills, .projects {
+  margin-top: 24px; /* Adds space above these sections */
+}
+
+/* Stylize About Me (Bio) section */
+.bio {
+  background: #f9e7fe; /* Sets a soft purple background for the bio section */
+  box-shadow: 0 8px 32px rgba(158, 118, 180, 0.12); /* Stronger purple shadow for floating effect */
+}
+
+/* Stylize Skills section */
+.skills {
+  background: #e3f2fd; /* Sets a light blue background for the skills section */
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.12); /* Stronger blue shadow for floating effect */
+}
+
+/* Styles the skills list to stack items vertically with spacing */
+.skills ul {
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks list items vertically */
+  gap: 12px; /* Adds space between each skill item */
+}
+
+/* Styles each skill item for better appearance */
+.skills li {
+  background: #fff; /* Sets a white background for each skill item */
+  border-radius: 12px; /* More rounded corners for floating effect */
+  padding: 8px 12px; /* Adds space inside each skill item */
+  box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10); /* Stronger shadow for floating effect */
+  display: flex; /* Uses flexbox for layout */
+  align-items: center; /* Vertically centers content in each skill item */
+  gap: 12px; /* Adds space between icon and text */
+  color: #1976d2; /* Sets text color to blue */
+
+}
+
+/* Adds left padding to skills and projects lists */
+.skills ul, .projects ul {
+  padding-left: 20px; /* Adds space to the left of the list */
+}
+
+/* Styles all section headings */
+h2 {
+  color: #1976d2; /* Sets heading color to blue */
+}
+
+
+
+
