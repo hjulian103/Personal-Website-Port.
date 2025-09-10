@@ -1,3 +1,53 @@
+/* Navigation Bar Styles */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #333 60%, #555 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 16px 0;
+}
+.navbar li {
+  display: inline;
+}
+.navbar a {
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar a:hover {
+  background: linear-gradient(90deg, #333 60%, #555 100%);
+  color: #fffde4;
+  box-shadow: 0 4px 16px rgba(152,70,70,0.18);
+}
+
+
+.hero{
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  box-shadow: 0 8px 32px rgba(158, 118, 180, 0.14);
+  padding: 28px 24px;
+  border-radius: 22px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+
 
 .video-preview a {
   display: block;
@@ -98,11 +148,35 @@ body {
 
 /* Styles for each main section (hero, bio, skills, projects, contact) */
 section {
-  max-width: 700px; /* Limits the section width for readability */
-  margin: 40px auto; /* Centers the section and adds space above/below */
-  padding: 24px; /* Adds space inside the section */
-  border-radius: 18px; /* More rounded corners for floating effect */
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12); /* Soft shadow for floating effect */
+  scroll-margin-top: 80px; /* Prevent navbar overlap when navigating */
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 48px 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+
+
+.bio {
+  margin-right: 45vw;
+  margin-left: auto;
+}
+.skills {
+  margin-left: 45vw;
+  margin-right: auto;
+}
+.projects {
+  margin-right: 44vw;
+  margin-left: auto;
+}
+.songs {
+  margin-left: 44vw;
+  margin-right: auto;
+}
+.contact {
+  margin-right: 15vw;
+  margin-left: auto;
 }
 
 /* Hero section: unique gradient background and shadow */
