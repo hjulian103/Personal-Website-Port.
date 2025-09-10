@@ -1,0 +1,403 @@
+/* Navigation Bar Styles */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #333 60%, #555 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 16px 0;
+}
+.navbar li {
+  display: inline;
+}
+.navbar a {
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar a:hover {
+  background: linear-gradient(90deg, #333 60%, #555 100%);
+  color: #fffde4;
+  box-shadow: 0 4px 16px rgba(152,70,70,0.18);
+}
+
+
+.hero{
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  box-shadow: 0 8px 32px rgba(158, 118, 180, 0.14);
+  padding: 28px 24px;
+  border-radius: 22px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+
+
+.video-preview a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Stylize Contact section */
+
+/* Stylize Songs section */
+.songs {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(25,118,210,0.12);
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  text-align: center;
+}
+.songs h2 {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.songs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+.songs li {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(158,118,180,0.10);
+  padding: 12px 10px 10px 10px;
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.songs li:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 32px rgba(158,118,180,0.18);
+}
+.songs img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(158,118,180,0.12);
+  background: #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.songs img:hover {
+  transform: scale(1.13) rotate(-4deg);
+  box-shadow: 0 8px 24px rgba(158,118,180,0.22);
+}
+.songs span {
+  margin-top: 8px;
+  font-size: 1.08rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Removed invalid selector and property. If you want to change the color of .songs span, use: */
+/* .songs span { color: #000000; } */
+/* Stylize GitHub and LinkedIn icons for contrast */
+
+/* Keyframes for shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply shake animation on hover to icons */
+.icon:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+/* Sets the default font, removes default margin/padding, and sets background and text color for the whole page */
+body {
+  font-family: Arial, sans-serif; /* Sets the font for all text to Arial */
+  margin: 0; /* Removes default margin around the page */
+  padding: 0; /* Removes default padding around the page */ /* Sets a light gray background color for the page */
+  color: #222; /* Sets the text color to dark gray */
+}
+
+/* Styles for each main section (hero, bio, skills, projects, contact) */
+section {
+  scroll-margin-top: 80px; /* Prevent navbar overlap when navigating */
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 48px 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+
+
+.bio {
+  margin-right: 45vw;
+  margin-left: auto;
+}
+.skills {
+  margin-left: 45vw;
+  margin-right: auto;
+}
+.projects {
+  margin-right: 44vw;
+  margin-left: auto;
+}
+.songs {
+  margin-left: 44vw;
+  margin-right: auto;
+}
+.contact {
+  margin-right: 15vw;
+  margin-left: auto;
+}
+
+/* Hero section: unique gradient background and shadow */
+.hero {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  box-shadow: 0 8px 32px rgba(158, 118, 180, 0.18);
+  color: #fff;
+}
+
+/* Bio section: soft purple background and shadow */
+.bio {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  box-shadow: 0 8px 32px rgba(158, 118, 180, 0.14);
+  padding: 28px 24px;
+  border-radius: 22px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.bio h2 {
+  color: #7c43bd;
+  font-size: 1.7rem;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.bio p {
+  color: #9053db;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0;
+  padding: 12px 18px;
+  border: 2px transparent;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  box-shadow: 0 2px 8px rgba(124,67,189,0.08), 0 0 12px 2px rgba(179,157,219,0.18);
+}
+
+
+/* Skills section: light blue background and shadow */
+.skills {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.10);
+}
+
+/* Projects section: soft green background and shadow */
+.projects {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  box-shadow: 0 8px 32px rgba(76, 175, 80, 0.12);
+  padding: 32px 24px;
+  border-radius: 22px;
+  margin-bottom: 32px;
+}
+.projects h2 {
+  color: #984646;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.projects li {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 16px rgba(234, 12, 12, 0.1);
+  padding: 20px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects li:hover {
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.projects a {
+  color: #984646;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.projects a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+.project-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(76,175,80,0.10);
+  padding: 18px;
+  margin-top: 18px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 8px 32px rgba(76,175,80,0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.video-preview {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 12px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(76,175,80,0.12);
+}
+.video-preview video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: brightness(0.95) contrast(1.1);
+  transition: filter 0.3s;
+  pointer-events: none;
+}
+.project-card:hover .video-preview video {
+  filter: brightness(1.05) contrast(1.2);
+  pointer-events: auto;
+}
+
+/* Contact section: soft yellow background and shadow */
+
+
+/* Hero section: centers content and adds a light blue background */
+.hero {
+  text-align: center; /* Centers text and image in the hero section */
+}
+
+/* Adds space below the main heading in the hero section */
+.hero h1 {
+  margin-bottom: 8px; /* Adds space below the hero heading */
+}
+
+/* Styles the hero image (profile picture) */
+.hero img {
+  width: 180px; /* Sets the image width to 180px */
+  max-width: 100%; /* Makes the image responsive to container size */
+  border-radius: 100px; /* Makes the image perfectly round */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* Adds a soft shadow around the image */
+  margin: 24px auto 16px auto; /* Adds space above and below, centers horizontally */
+  display: block; /* Centers the image in the section */
+  object-fit: cover; /* Crops the image to fit its container */
+}
+
+
+.hero img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.18); /* Enhances the shadow on hover */
+}
+
+
+/* Adds space above bio, skills, and projects sections */
+/* Adds space above bio, skills, and projects sections */
+.bio, .skills, .projects {
+  margin-top: 24px; /* Adds space above these sections */
+}
+
+/* Stylize About Me (Bio) section */
+.bio {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  box-shadow: 0 8px 32px rgba(158, 118, 180, 0.12); /* Stronger purple shadow for floating effect */
+}
+
+/* Stylize Skills section */
+.skills {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.12); /* Stronger blue shadow for floating effect */
+}
+
+/* Styles the skills list to stack items vertically with spacing */
+.skills ul {
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks list items vertically */
+  gap: 12px; /* Adds space between each skill item */
+}
+
+/* Styles each skill item for better appearance */
+.skills li {
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  border-radius: 12px; /* More rounded corners for floating effect */
+  padding: 8px 12px; /* Adds space inside each skill item */
+  box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10); /* Stronger shadow for floating effect */
+  display: flex; /* Uses flexbox for layout */
+  align-items: center; /* Vertically centers content in each skill item */
+  gap: 12px; /* Adds space between icon and text */
+  color: #4585c5; /* Sets text color to blue */
+
+}
+
+/* Adds left padding to skills and projects lists */
+.skills ul, .projects ul {
+  padding-left: 20px; /* Adds space to the left of the list */
+}
+
+/* Styles all section headings */
+.skills {
+  color: #1976d2; /* Sets heading color to blue */
+}
+
+.bio h2{
+  color: #c04af6; /* Sets heading color to purple */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* Adds subtle shadow for depth */
+}
+
+.footer{
+  background: linear-gradient(135deg, #333 60%, #555 100%);
+  color: whitesmoke;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 0.875rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
