@@ -105,17 +105,6 @@
   to { transform: rotate(360deg); }
 }
 
-@keyframes pulse-border {
-  0% {
-    box-shadow: 0 0 0 0 rgba(122, 21, 177, 0.7);
-  }
-  70% {
-    box-shadow: 0 3px 6px 10px rgba(163, 23, 93, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(252, 0, 126, 0);
-  }
-}
 
 @keyframes borderglow {
   from 0% {
@@ -140,7 +129,7 @@
   top: 0;
   z-index: 100;
   border-radius: 100px;
-  animation: borderglow 3s infinite;
+  
 }
 .navbar ul {
   display: flex;
@@ -161,12 +150,11 @@
   padding: 8px 16px;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
-  animation: pulse-border 2s infinite;
 }
 .navbar a:hover {
-  background: linear-gradient(90deg, #333 60%, #555 100%);
   color: #fffde4;
   box-shadow: 0 4px 16px rgba(152,70,70,0.18);
+  animation: textglow 2.5s infinite alternate;
 }
 
 
@@ -180,6 +168,7 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
 
 
 
@@ -256,6 +245,7 @@
   font-size: 1.08rem;
   color: rgba(198, 46, 193, 0.1);
   font-weight: bold;
+  animation: textglow 2.5s infinite alternate;
 }
 
 /* Removed invalid selector and property. If you want to change the color of .songs span, use: */
@@ -341,9 +331,10 @@ section {
   font-size: 1.7rem;
   margin-bottom: 16px;
   letter-spacing: 1px;
+  animation: textglow 2.5s infinite alternate;
 }
 .bio p {
-  color: #9053db;
+  color: #ffffff;
   font-size: 1.15rem;
   line-height: 1.7;
   margin: 0;
@@ -352,6 +343,7 @@ section {
   border-radius: 12px;
   background: linear-gradient(135deg, #333 60%, #555 100%);
   box-shadow: 0 2px 8px rgba(124,67,189,0.08), 0 0 12px 2px rgba(179,157,219,0.18);
+  animation: textglow 2.5s infinite alternate;
 }
 
 
@@ -370,7 +362,7 @@ section {
   margin-bottom: 32px;
 }
 .projects h2 {
-  color: #984646;
+  color: #ffffff;
   font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 1px;
@@ -393,14 +385,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: borderglow 3s infinite;
 }
 .projects li:hover {
   box-shadow: 0 8px 32px rgba(255, 255, 255, 0.18);
   transform: translateY(-4px) scale(1.03);
 }
 .projects a {
-  color: #984646;
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.15rem;
@@ -464,6 +455,7 @@ section {
 .hero p{
   margin-bottom: 16px;
   margin-left: 25%; /* Adds space below the hero heading */
+  animation: textglow 2.5s infinite alternate;
 }
 
 /* Styles the hero image (profile picture) */
@@ -517,11 +509,11 @@ section {
   background: linear-gradient(135deg, #333 60%, #555 100%);
   border-radius: 12px; /* More rounded corners for floating effect */
   padding: 8px 12px; /* Adds space inside each skill item */
-  animation: borderglow 3s infinite; /* Adds pulsing border effect */
   display: flex; /* Uses flexbox for layout */
   align-items: center; /* Vertically centers content in each skill item */
   gap: 12px; /* Adds space between icon and text */
-  color: #4585c5; /* Sets text color to blue */
+  color: #ffffff; /* Sets text color to blue */
+  animation: textglow 2.5s infinite alternate;
 
 }
 
@@ -532,13 +524,14 @@ section {
 
 /* Styles all section headings */
 .skills {
-  color: #1976d2; /* Sets heading color to blue */
+  color: #ffffff; /* Sets heading color to blue */
 }
 
 .bio h2{
-  color: #c04af6; /* Sets heading color to purple */
+  color: #ffffff; /* Sets heading color to purple */
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* Adds subtle shadow for depth */
 }
+
 
 .footer{
   background: linear-gradient(135deg, #333 60%, #555 100%);
@@ -549,5 +542,26 @@ section {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+h2, .bio h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  animation: textglow 2.5s infinite alternate;
+  /* Only glow the text, not the border */
+}
 
+@keyframes textglow {
+  0% {
+    text-shadow: 0 0 8px #9053db, 0 0 16px #9053db, 0 0 24px #9053db;
+  }
+  50% {
+    text-shadow: 0 0 16px #b388ff, 0 0 32px #9053db, 0 0 48px #9053db;
+  }
+  100% {
+    text-shadow: 0 0 8px #9053db, 0 0 16px #9053db, 0 0 24px #9053db;
+  }
+}
 
+.bio, .skills, .projects, .songs{
+  animation: pulse-border 3s infinite alternate;
+}
