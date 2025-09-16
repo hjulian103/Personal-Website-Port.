@@ -1,3 +1,8 @@
+@keyframes spin {
+  from  { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}* Border Pulse Animation Utility */
+
 /* Navigation Bar Styles */
 .navbar {
   width: 100%;
@@ -111,6 +116,7 @@
 .songs img:hover {
   transform: scale(1.13) rotate(-4deg);
   box-shadow: 0 8px 24px rgba(158,118,180,0.22);
+  animation: spin 2s linear infinite;
 }
 .songs span {
   margin-top: 8px;
@@ -317,7 +323,13 @@ section {
 
 /* Adds space below the main heading in the hero section */
 .hero h1 {
-  margin-bottom: 8px; /* Adds space below the hero heading */
+  margin-bottom: 8px;
+  margin-left: 30%; /* Adds space below the hero heading */
+}
+
+.hero p{
+  margin-bottom: 16px;
+  margin-left: 25%; /* Adds space below the hero heading */
 }
 
 /* Styles the hero image (profile picture) */
@@ -325,7 +337,7 @@ section {
   width: 180px; /* Sets the image width to 180px */
   max-width: 100%; /* Makes the image responsive to container size */
   border-radius: 100px; /* Makes the image perfectly round */
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* Adds a soft shadow around the image */
+  box-shadow: 0 6px 16px rgba(200, 55, 181, 0.12); /* Adds a soft shadow around the image */
   margin: 24px auto 16px auto; /* Adds space above and below, centers horizontally */
   display: block; /* Centers the image in the section */
   object-fit: cover; /* Crops the image to fit its container */
@@ -335,7 +347,8 @@ section {
 .hero img:hover {
   transform: scale(1.05); /* Slightly enlarges the image on hover */
   transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.18); /* Enhances the shadow on hover */
+   /* Adds pulsing border effect */
+  /* Enhances shadow on hover */ /* Sets the color of the pulsing border */
 }
 
 
