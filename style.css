@@ -1,15 +1,146 @@
+/* Responsive Design for the Whole Page */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 98%;
+    min-width: 0;
+    margin: 10px auto 0 auto;
+    border-radius: 32px;
+    font-size: 1rem;
+  }
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  section {
+    max-width: 99vw;
+    margin: 40px 0.5vw;
+    padding: 28px 6px;
+  }
+  .bio, .skills, .projects, .songs, .contact {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .hero {
+    padding: 16px 3vw;
+    border-radius: 12px;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+    word-break: break-word;
+  }
+  .hero img {
+    width: 100px;
+    max-width: 70vw;
+    margin: 10px auto 6px auto;
+  }
+  .hero h1 {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+  .hero p {
+    font-size: 0.98rem;
+    margin-left: 0;
+  }
+  .songs ul {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0 1vw;
+    font-size: 0.92rem;
+  }
+  .navbar ul {
+    gap: 10px;
+    padding: 10px 0;
+  }
+  section {
+    max-width: 100vw;
+    margin: 18px 0;
+    padding: 10px 1vw;
+    border-radius: 8px;
+  }
+  .bio, .skills, .projects, .songs, .contact {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 8px 1vw;
+  }
+  .hero {
+    padding: 8px 1vw;
+    border-radius: 6px;
+    align-items: center;
+    text-align: center;
+  }
+  .hero img {
+    width: 70px;
+    max-width: 60vw;
+    margin: 6px auto 4px auto;
+  }
+  .hero h1 {
+    font-size: 0.98rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .songs ul {
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+  .projects ul {
+    gap: 10px;
+  }
+}
+/* Responsive Design */
+
+
 @keyframes spin {
   from  { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(122, 21, 177, 0.7);
+  }
+  70% {
+    box-shadow: 0 3px 6px 10px rgba(163, 23, 93, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(252, 0, 126, 0);
+  }
+}
+
+@keyframes borderglow {
+  from 0% {
+    box-shadow: 0 0 5px 6px #9053db;
+  }
+  50% {
+    box-shadow: 0 0 5px 6px #9053db;
+  }
+  to 100% {
+    box-shadow: 0 0 5px 6px #9053db;
+  }
+}
 /* Navigation Bar Styles */
 .navbar {
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: linear-gradient(90deg, #333 60%, #555 100%);
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-radius: 100px;
+  animation: borderglow 3s infinite;
 }
 .navbar ul {
   display: flex;
@@ -30,6 +161,7 @@
   padding: 8px 16px;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
+  animation: pulse-border 2s infinite;
 }
 .navbar a:hover {
   background: linear-gradient(90deg, #333 60%, #555 100%);
@@ -91,13 +223,15 @@
 .songs li {
   background: linear-gradient(135deg, #333 60%, #555 100%);
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(158,118,180,0.10);
+  box-shadow: 0 4px 20px rgba(158,118,180,0.10);
   padding: 12px 10px 10px 10px;
   min-width: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s, box-shadow 0.2s;
+    animation: borderglow 2s linear infinite;
+
 }
 .songs li:hover {
   transform: translateY(-4px) scale(1.05);
@@ -120,7 +254,7 @@
 .songs span {
   margin-top: 8px;
   font-size: 1.08rem;
-  color: #ffffff;
+  color: rgba(198, 46, 193, 0.1);
   font-weight: bold;
 }
 
@@ -259,6 +393,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: borderglow 3s infinite;
 }
 .projects li:hover {
   box-shadow: 0 8px 32px rgba(255, 255, 255, 0.18);
@@ -340,6 +475,7 @@ section {
   margin: 24px auto 16px auto; /* Adds space above and below, centers horizontally */
   display: block; /* Centers the image in the section */
   object-fit: cover; /* Crops the image to fit its container */
+  animation: borderglow 3s infinite; /* Adds pulsing border effect */
 }
 
 
@@ -381,7 +517,7 @@ section {
   background: linear-gradient(135deg, #333 60%, #555 100%);
   border-radius: 12px; /* More rounded corners for floating effect */
   padding: 8px 12px; /* Adds space inside each skill item */
-  box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10); /* Stronger shadow for floating effect */
+  animation: borderglow 3s infinite; /* Adds pulsing border effect */
   display: flex; /* Uses flexbox for layout */
   align-items: center; /* Vertically centers content in each skill item */
   gap: 12px; /* Adds space between icon and text */
@@ -412,4 +548,6 @@ section {
   font-size: 0.875rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+
 
