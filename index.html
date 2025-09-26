@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -16,15 +18,14 @@
     </ul>
   </nav>
   <!-- Video Background -->
-  <video autoplay muted loop id="bg-video" style="position: fixed; right: 0; bottom: 0; min-width: 100vw; min-height: 100vh; z-index: -1; object-fit: fill;">
-    <source src="galaxy.mp4" type="video/mp4">
-  </video>
+ 
 
   <!-- Hero Section -->
   <section class="hero">
     <img src="IMG_1175 2.jpeg" alt="Hero Image">
     <h1>Welcome to My Portfolio</h1>
     <p>Web Development Student | Aspiring Developer</p>
+
   </section>
 
 
@@ -34,6 +35,7 @@
     <p>
       Hi! I'm Julian, I'm currently studying web development and I love learning new technologies and building creative projects. I love working on both the front-end and back-end aspects of web development.
     </p>
+
   </section>
 
   <!-- Skills Section -->
@@ -53,6 +55,7 @@
       <li>Responsive Design</li>
       <li>Team Collaboration</li>
     </ul>
+
   </section>
 
   <!-- Projects Section -->
@@ -60,7 +63,7 @@
     <h2>Projects💻</h2>
     <ul>
       <li>
-        <a href="https://hjulian103.github.io/Photo-Gallery/" style="display:block;">
+        <a href="https://hjulian103.github.io/Photo-Gallery/" style="display:show;">
           Photo Gallery📸
           <div class="video-preview" style="margin-top:10px;">
             <video src="record.mp4" muted loop preload="metadata" style="width:100%;border-radius:8px;cursor:pointer;" onclick="window.location.href='https://hjulian103.github.io/Photo-Gallery/';"></video>
@@ -70,11 +73,10 @@
 
 
     </ul>
-  </section>
-</body>
-</html>
 
-<!-- Songs on Rotation Section -->
+  </section>
+
+  <!-- Songs on Rotation Section -->
 <section class="songs" id="songs">
   <h2>🎶Songs on Rotation🎶</h2>
   <ul style="list-style: none; padding: 0; display: flex; gap: 32px; justify-content: center;">
@@ -104,7 +106,8 @@
   <span style="font-size: 1rem; color: #ffffff; margin-top: 2px;">Playboi Carti</span>
     </li>
   </ul>
-</section
+
+  </section>
 
 <section class="contact" id="contact">
     <ul style="list-style: none; padding: 0; display: flex; gap: 32px; justify-content: center;">
@@ -121,9 +124,24 @@
     </ul>
   </section>
 
-  
-
-<section class="footer">
+  <section class="footer">
   <p>&copy; 2025 Julian's Portfolio</p>
 </section>
+
+<!-- SVG Race Track Background (fixed, covers viewport) -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
+<script src="anime.js"></script>
+<script src="next.js"></script>
+<!-- Anime.js on-scroll section entrance animation -->
+
+<!-- Anime.js for SVG morphing -->
+
+
+<!-- Scroll-to-Top Button -->
+
+
+<!-- Random Section Background Color on Load -->
+
 

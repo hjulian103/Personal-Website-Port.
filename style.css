@@ -1,3 +1,26 @@
+/* Background Shape Styles */
+
+
+
+
+  
+
+.glassmorph {
+  background: rgba(255,255,255,0.12) !important;
+  box-shadow: 0 8px 32px rgba(31,38,135,0.18);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border-radius: 18px;
+  border: 1.5px solid rgba(255,255,255,0.18);
+}
+/* Animated SVG Divider */
+
+
+/* Fade-in and Fade-out Animation for Sections */
+
+
+/* Dark Mode Styles */
+
 /* Responsive Design for the Whole Page */
 @media (max-width: 1024px) {
   .navbar {
@@ -124,7 +147,7 @@
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: linear-gradient(90deg, #333 60%, #555 100%);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 12px rgba(243, 122, 122, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -159,7 +182,7 @@
 
 
 .hero{
-  background: linear-gradient(135deg, #333 60%, #555 100%);
+  /*background: linear-gradient(135deg, #333 60%, #555 100%);*/
   box-shadow: 0 8px 32px rgba(158, 118, 180, 0.14);
   padding: 28px 24px;
   border-radius: 22px;
@@ -189,7 +212,7 @@
 
 /* Stylize Songs section */
 .songs {
-  background: linear-gradient(135deg, #333 60%, #555 100%);
+  background: transparent;
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(25,118,210,0.12);
   max-width: 700px;
@@ -271,8 +294,10 @@
 body {
   font-family: Arial, sans-serif; /* Sets the font for all text to Arial */
   margin: 0; /* Removes default margin around the page */
-  padding: 0; /* Removes default padding around the page */ /* Sets a light gray background color for the page */
-  color: #222; /* Sets the text color to dark gray */
+  padding: 0; /* Removes default padding around the page */
+  background: linear-gradient(120deg, #000, #9053db, #1976d2, #000) 0 0/400% 400%;
+  color: #f5f5f5; /* Sets the text color to light gray for contrast */
+  transition: background 0.5s;
 }
 
 /* Styles for each main section (hero, bio, skills, projects, contact) */
@@ -283,6 +308,24 @@ section {
   padding: 48px 24px;
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transition: box-shadow 0.3s, transform 0.25s cubic-bezier(.22,1,.36,1), background 0.3s;
+  will-change: transform, box-shadow;
+}
+
+section:hover, .section-hover {
+  box-shadow: 0 20px 48px 0 rgba(144,83,219,0.18), 0 2px 24px 0 rgba(25,118,210,0.10) !important;
+  z-index: 2;
+  transform: scale(1.025);
+}
+
+section, .navbar {
+  /* Add glassmorphism effect */
+  background: rgba(255,255,255,0.12) !important;
+  box-shadow: 0 8px 32px rgba(31,38,135,0.18);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border-radius: 18px;
+  border: 1.5px solid rgba(255,255,255,0.18);
 }
 
 
@@ -327,6 +370,11 @@ section {
   align-items: flex-start;
 }
 .bio h2 {
+
+.section-hover {
+  box-shadow: 0 20px 48px 0 rgba(144,83,219,0.18), 0 2px 24px 0 rgba(25,118,210,0.10) !important;
+  z-index: 2;
+}
   color: #7c43bd;
   font-size: 1.7rem;
   margin-bottom: 16px;
@@ -431,7 +479,7 @@ section {
   object-fit: cover;
   filter: brightness(0.95) contrast(1.1);
   transition: filter 0.3s;
-  pointer-events: none;
+  pointer-events: show;
 }
 .project-card:hover .video-preview video {
   filter: brightness(1.05) contrast(1.2);
@@ -467,7 +515,6 @@ section {
   margin: 24px auto 16px auto; /* Adds space above and below, centers horizontally */
   display: block; /* Centers the image in the section */
   object-fit: cover; /* Crops the image to fit its container */
-  animation: borderglow 3s infinite; /* Adds pulsing border effect */
 }
 
 
